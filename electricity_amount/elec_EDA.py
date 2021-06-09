@@ -28,3 +28,12 @@ sub = pd.read_csv('electricity_amount/energy/sample_submission.csv', encoding='c
 train_df.info()
 train_df.shape
 train_df.columns
+
+# renaming columns
+train_df.columns = ['num','datetime','target','temperature','windspeed','humidity',
+                    'precipitation','insolation','nelec_cool_flag','solar_flag']
+test_df.columns = ['num','datetime','temperature','windspeed','humidity','precipitation',
+                   'insolation','nelec_cool_flag','solar_flag']
+
+train_df.info()
+train_df.corr()
